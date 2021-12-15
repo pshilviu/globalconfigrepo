@@ -1,0 +1,16 @@
+{
+  "jsonString": "Tom Cruise",
+  "jsonNumber": 56,
+  "jsonObject": {
+    "jsonObjectName": "Cool Object"
+  },
+  "jsonSerializedDate": "2019-07-26T22:59:57+01:00",
+  "jsonNullObject": null,
+  "jsonNumberWithDp": 67.5,
+  "jsonBool": true,
+  "jsonArray": [
+    "arrayItem1",
+    "arrayItem2",
+    "arrayItem3"
+  ]
+}

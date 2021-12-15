@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORG.HttpClient", "ORG.HttpClient\ORG.HttpClient.csproj", "{A13B0FF4-BE6F-4DB7-8899-32BC24256F07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORG.HttpClient.UnitTests", "ORG.HttpClient.UnitTests\ORG.HttpClient.UnitTests.csproj", "{7E310506-5D45-4139-98C7-BF392B08E934}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{695C6829-698D-4F39-AF08-D645FF9CA9B5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.editorconfig = ..\..\.editorconfig
+		..\..\Directory.Build.props = ..\..\Directory.Build.props
+		..\..\nuget.config = ..\..\nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A13B0FF4-BE6F-4DB7-8899-32BC24256F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13B0FF4-BE6F-4DB7-8899-32BC24256F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13B0FF4-BE6F-4DB7-8899-32BC24256F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13B0FF4-BE6F-4DB7-8899-32BC24256F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E310506-5D45-4139-98C7-BF392B08E934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E310506-5D45-4139-98C7-BF392B08E934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E310506-5D45-4139-98C7-BF392B08E934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E310506-5D45-4139-98C7-BF392B08E934}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89856996-1B10-4A81-98F1-60517A5302F8}
+	EndGlobalSection
+EndGlobal

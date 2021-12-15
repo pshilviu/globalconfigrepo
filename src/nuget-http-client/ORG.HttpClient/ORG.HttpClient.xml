@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PAH.HttpClient</name>
+    </assembly>
+    <members>
+        <member name="T:PAH.HttpClient.Exceptions.ApiException">
+            <summary>
+            API exception class
+            </summary>
+        </member>
+        <member name="M:PAH.HttpClient.Exceptions.ApiException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PAH.HttpClient.Exceptions.ApiException"/> class.
+            </summary>
+        </member>
+        <member name="M:PAH.HttpClient.Exceptions.ApiException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PAH.HttpClient.Exceptions.ApiException"/> class.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PAH.HttpClient.Exceptions.ApiException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PAH.HttpClient.Exceptions.ApiException"/> class.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:PAH.HttpClient.Exceptions.ApiException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PAH.HttpClient.Exceptions.ApiException"/> class.
+            with info and context
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:PAH.HttpClient.Extensions.HttpClientExtensions">
+            <summary>
+            HTTP Client Extensions
+            </summary>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.GetAsync``1(System.Net.Http.HttpClient,System.String)">
+            <summary>
+            Get with deserialized Json response
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <typeparam name="TResponse">Response body model</typeparam>
+            <returns></returns>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.PostAsync``2(System.Net.Http.HttpClient,System.String,``0)">
+            <summary>
+            Post with JSON serialised request body and response body
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <param name="requestModel"></param>
+            <typeparam name="TRequest">Request body model</typeparam>
+            <typeparam name="TResponse">Response body model</typeparam>
+            <returns></returns>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.PostAsync``1(System.Net.Http.HttpClient,System.String,``0)">
+            <summary>
+            Post with JSON serialized request body, no response body
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <param name="requestModel"></param>
+            <typeparam name="TRequest">Request body model</typeparam>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.PostAsync(System.Net.Http.HttpClient,System.String)">
+            <summary>
+            Post with no body or response body
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.PostAsync``1(System.Net.Http.HttpClient,System.String)">
+            <summary>
+            Post with no request body, deserialized JSON response body
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <typeparam name="TResponse">Response body model</typeparam>
+            <returns></returns>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+        </member>
+        <member name="M:PAH.HttpClient.Extensions.HttpClientExtensions.PutAsync``1(System.Net.Http.HttpClient,System.String,``0)">
+            <summary>
+            Put with JSON serialized
+            </summary>
+            <param name="httpClient"></param>
+            <param name="route"></param>
+            <param name="requestModel"></param>
+            <typeparam name="TRequest">Request body model</typeparam>
+            <exception cref="T:PAH.HttpClient.Exceptions.ApiException">Api Exception</exception>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:PAH.HttpClient.Installer">
+            <summary>
+            Installer class for IServiceCollection extensions
+            </summary>
+        </member>
+        <member name="M:PAH.HttpClient.Installer.AddAzureAdSecureClientApi``3(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add Service with a Typed HTTP client that is secured by azure AD DI
+            </summary>
+            <param name="services"></param>
+            <typeparam name="TOptions">Configuration inherited from <see cref="T:PAH.HttpClient.Options.AzureAdClientOptions"/></typeparam>
+            <typeparam name="TInterface">Interface of service</typeparam>
+            <typeparam name="TConcrete">Concrete implementation of service</typeparam>
+        </member>
+        <member name="T:PAH.HttpClient.Options.AzureAdClientOptions">
+            <summary>
+            Http client options for azure ad secure endpoints
+            </summary>
+        </member>
+        <member name="P:PAH.HttpClient.Options.AzureAdClientOptions.BaseUrl">
+            <inheritdoc />
+        </member>
+        <member name="P:PAH.HttpClient.Options.AzureAdClientOptions.Timeout">
+            <inheritdoc />
+        </member>
+        <member name="T:PAH.HttpClient.Options.IBaseClientOptions">
+            <summary>
+            Base http client options
+            </summary>
+        </member>
+        <member name="P:PAH.HttpClient.Options.IBaseClientOptions.BaseUrl">
+            <summary>
+            Base url for client
+            </summary>
+        </member>
+        <member name="P:PAH.HttpClient.Options.IBaseClientOptions.Timeout">
+            <summary>
+            Timeout value (defaults to 30 seconds)
+            </summary>
+        </member>
+    </members>
+</doc>

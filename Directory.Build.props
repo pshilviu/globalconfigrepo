@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+    <EnableOrgAnalyzers>true</EnableOrgAnalyzers>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <Org_IsApiProject Condition="$(MSBuildProjectName.EndsWith('Api'))">true</Org_IsApiProject>
+    <Org_IsTestProject Condition="$(MSBuildProjectName.EndsWith('Tests'))">true</Org_IsTestProject>
+    <Org_NuGet_IconPath>$(MSBuildThisFileDirectory)src/build-props/images/icon.png</Org_NuGet_IconPath>
+    <Org_Props_PackNuGet>$(MSBuildThisFileDirectory)src/build-props/PackNuGetProperties.props</Org_Props_PackNuGet>
+    <Org_DirectoryBuildPropsPath>$(MSBuildThisFileDirectory)</Org_DirectoryBuildPropsPath>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/AddAnalyzers.props" />
+  <Import Project="$(MSBuildThisFileDirectory)src/build-props/AddCommonTestNugetPackages.props" />
+</Project>
